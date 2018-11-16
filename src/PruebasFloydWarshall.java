@@ -30,7 +30,7 @@ class Floyd{
         imprimirResultado(distancia, siguiente);
 	}
 	public void imprimirResultado(double[][] distancia, int[][] siguiente) {
-        System.out.println("par     distanciaancia    camino");
+        System.out.println("par     distancia    camino");
         for (int i = 0; i < siguiente.length; i++) {
             for (int j = 0; j < siguiente.length; j++) {
                 if (i != j) {
@@ -51,7 +51,11 @@ class Floyd{
 public class PruebasFloydWarshall {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		 int[][] pesos = {{1, 3, -2}, {2, 1, 4}, {2, 3, 3}, {3, 4, 2}, {4, 2, -1}};
+	        int numVertices = 4;
+	 Floyd floyd=new Floyd();
+	 floyd.floydWarshall(pesos, numVertices);
 
 	}
 
